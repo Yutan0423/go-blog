@@ -1,0 +1,22 @@
+{
+  "artilce_id": 1,
+  "title": "Sample Article Title",
+  "contents": "This is a sample content for the article.",
+  "user_name": "JohnDoe",
+  "nice": 42,
+  "comment": [
+    {
+      "comment_id": 101,
+      "article_id": 1,
+      "message": "Great article! Thanks for sharing.",
+      "created_at": "2023-10-14T15:00:00Z"
+    },
+    {
+      "comment_id": 102,
+      "article_id": 1,
+      "message": "I found this very helpful.",
+      "created_at": "2023-10-14T16:15:25Z"
+    }
+  ],
+  "created_at": "2023-10-14T10:30:00Z"
+}

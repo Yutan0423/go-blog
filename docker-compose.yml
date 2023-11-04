@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: db-for-go
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --sql-mode=ONLY_FULL_GROUP_BY,NO_ENGINE_SUBSTITUTION
+    environment:
+      MYSQL_ROOT_USER: ${ROOTUSER} # MySQLのルートユーザー名
+      MYSQL_ROOT_PASSWORD: ${ROOTPASS} # MySQLのルートユーザーのパスワード
+      MYSQL_DATABASE: ${DATABASE} # MySQLに用意されている初期データベースの名前
+      MYSQL_USER: ${USERNAME} # MySQLのユーザー名
+      MYSQL_PASSWORD: ${USERPASS} # MySQLのユーザーパスワード
+      TZ: "Asia/Tokyo"
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-volume:/var/lib/mysql
+
+volumes:
+  db-volume:

@@ -1,0 +1,22 @@
+package models
+
+import (
+	"time"
+)
+
+type Comment struct {
+	CommentID int       `json:"comment_id"`
+	ArticleID int       `json:"article_id"`
+	Message   string    `json:"message"`
+	CreatedAt time.Time `json:"created_at"`
+}
+
+type Article struct {
+	ArticleID   int       `json:"artilce_id"`
+	Title       string    `json:"title"`
+	Contents    string    `json:"contents"`
+	UserName    string    `json:"user_name"`
+	NiceNum     int       `json:"nice"`
+	CommentList []Comment `json:"comment"`
+	CreatedAt   time.Time `json:"created_at"`
+}
