@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/Yutan0423/blog-api/models"
-	"github.com/Yutan0423/blog-api/repositories"
-	"github.com/Yutan0423/blog-api/repositories/testdata"
+	"github.com/Yutan0423/go-medium-level/models"
+	"github.com/Yutan0423/go-medium-level/repositories"
+	"github.com/Yutan0423/go-medium-level/repositories/testdata"
 	_ "github.com/go-sql-driver/mysql"
 )
 

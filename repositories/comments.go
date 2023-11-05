@@ -4,7 +4,7 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/Yutan0423/blog-api/models"
+	"github.com/Yutan0423/go-medium-level/models"
 )
 
 // 新規投稿をDBにinsertする関数

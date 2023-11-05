@@ -1,4 +1,4 @@
-module github.com/Yutan0423/blog-api
+module github.com/Yutan0423/go-medium-level
 
 go 1.21
 
