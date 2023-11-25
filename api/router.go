@@ -6,6 +6,7 @@ import (
 
 	"github.com/gorilla/mux"
 
+	"github.com/Yutan0423/go-medium-level/api/middlewares"
 	"github.com/Yutan0423/go-medium-level/controllers"
 	"github.com/Yutan0423/go-medium-level/services"
 )
@@ -22,5 +23,7 @@ func NewRouter(db *sql.DB) *mux.Router {
 	r.HandleFunc("/article/nice", aCon.PostNiceHandler).Methods(http.MethodPost)
 	r.HandleFunc("/comment", cCon.PostCommentHandler).Methods(http.MethodPost)
 
+	r.Use(middlewares.LoggingMiddleware)
+	r.Use(middlewares.AuthMiddleware)
 	return r
 }

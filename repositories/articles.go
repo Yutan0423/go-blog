@@ -29,7 +29,6 @@ func InsertArticle(db *sql.DB, article models.Article) (models.Article, error) {
 	id, _ := result.LastInsertId()
 
 	newArticle.ArticleID = int(id)
-
 	return newArticle, nil
 }
 

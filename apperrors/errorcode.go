@@ -13,8 +13,12 @@ const (
 
 	ReqBodyDecodeFailed ErrCode = "R001"
 	BadParam            ErrCode = "R002"
+
+	RequiredAuthorizationHeader ErrCode = "A001"
+	CannotMakeValidator         ErrCode = "A002"
+	Unauthorized                ErrCode = "A003"
 )
 
-func (code ErrCode) Wrap(err error, message string) error {
+func (code ErrCode) Wrap(err error, message string) *MyAppError {
 	return &MyAppError{ErrCode: code, Message: message, Err: err}
 }
